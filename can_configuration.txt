@@ -3,20 +3,32 @@ DBC file used: Ford Fusion 2018 PT
 ECUs and messages:
 > Powertrain control (motore)
     - EngineData: 30ms
+        Receivers: ADAS / Lane Keep Assist, EPS, Body Control
 > ABS/Brake control
     - Cruise_status: 400ms
+        Receivers: Powertrain Control, ADAS / Lane Keep Assist, Body Control
     - WheelSpeed: 20ms
+        Receivers: Powertrain Control, ADAS / Lane Keep Assist, EPS, Doors Control
     - Yaw_Data: 20ms
+        Receivers: Powertrain Control, ADAS / Lane Keep Assist, EPS
     - Accel_data: 20ms
+        Receivers: Powertrain Control, ADAS / Lane Keep Assist, EPS
     - WheelData: 120ms
+        Receivers: Powertrain Control, ADAS / Lane Keep Assist
 > ADAS / Lane Keep Assist
     - Lane_Keep_Assist_Control: 300ms
+        Receivers: EPS, Body Control
     - Lane_Keep_Assist_Status: 480ms
+        Receivers: Powertrain Control, Body Control
 > Body Control (luci, tergicristalli):
     - BCM_to_HS_Body: 480ms
+        Receivers: Powertrain Control, ADAS / Lane Keep Assist, EPS
 > Door Control
     - Doors: event triggered
 > EPS (Electronic Power Steering)
     - EPAS_INFO: 480ms
+        Receivers: ADAS / Lane Keep Assist, Body Control
     - Steering_Wheel_Data_CG1: 20ms
+        Receivers: ADAS / Lane Keep Assist, Powertrain Control, ABS
     - Steering_Buttons: event_triggered
+        Receivers: ADAS / Lane Keep Assist
